@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyte Restaurant</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+
+        class Fore extends React.Component{
+            render() {
+                return(
+                    <div id="fore">
+
+                        <img id="chef" src="chef.svg" alt="chef" />
+                        <h1 id="fore_name">Lyte's</h1>
+                        <br/>
+                        <h3 id="fore_text">Lyte is all about food | Awakening Memories</h3>
+                    </div>
+                )
+            }
+        }
+
+        class Top extends React.Component{
+
+            render () {
+                return(
+                    <div>
+                        
+                    <div id="tops">
+                        <navbar id="top">
+                        <nav id="first-nav">
+                            <ul><img id="fire" src="fire.svg" alt="firesticks" />
+                            <li><button value="About" className="top-button" onClick={this.props.mainH}>About</button></li>
+                            <li><button value="Projects" className="top-button" onClick={this.props.mainH}>Projects</button></li>
+                            <li><button value="Menu" className="top-button" onClick={this.props.mainH}>Menu</button></li>
+                            <li><button value="Chat" className="top-button" onClick={this.props.mainH}>Reach Us</button></li>
+                            <li><button value="Gallery" className="top-button" onClick={this.props.mainH}>Gallery</button></li>      
+                            </ul>
+                            <button className="menu-btn" onClick={this.toggleMenu}><svg width="50px" height="50px" viewBox="-4.8 -4.8 33.60 33.60" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#1a398d" transform="rotate(0)matrix(-1, 0, 0, -1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.192"></g><g id="SVGRepo_iconCarrier"> <path d="M4 17H20M4 12H20M4 7H20" stroke="#00000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+                        </nav>
+                        </navbar>
+                        <br />
+                    </div>
+                    </div>
+                );
+            } 
+        }
+            
+
+        class App extends React.Component {
+
+            constructor(props){
+                super(props);
+                this.state = {
+                    main: Fore
+                }
+            }
+
+            render() {
+                    const MainComponent = this.state.main;
+
+                return (
+                    <div>
+                         <Top mainH = {this.mainHome}/>
+                         <MainComponent />
+                    </div>
+                );
+
+                mainHome = (event) => {
+                    if(event.target.value=="About") {
+                    this.setState({
+                        main: About
+                    });}
+                    else if(event.target.value=="Projects") {
+                    this.setState({
+                        main: Projects
+                    });}
+                    else if(event.target.value=="Menu") {
+                    this.setState({
+                        main: MyProjects
+                    });}
+                    else if(event.target.value=="Chat") {
+                    this.setState({
+                        main: Chat
+                    });}
+                    else if(event.target.value=="Gallery") {
+                    this.setState({
+                        main: Gallery
+                    });}
+            };
+            }
+        }
+
+        const container = document.querySelector('#app');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+    </script>
+    
+    <div>
+    <footer>
+        <img id="footsvg" src="twitter.svg" alt="twitter" title="lyte's twitter">
+        <img id="footsvg" src="ig.svg" alt="instagram" title="lyte's instagram">
+        <img id="footsvg" src="facebook.svg" alt="facebook" title="lyte's facebook">
+    </footer>
+    <h4 id="tag">Lytecodes ©️2023</h4>
+    </div>
+</body>
+</html>

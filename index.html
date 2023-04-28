@@ -53,6 +53,178 @@
                 );
             } 
         }
+
+        class About extends React.Component {
+            render() {
+                return(
+                    <div>
+                        <div id="about">
+                            <h2>About Lyte Restaurant</h2>
+                            <nav><h4>Kumasi ◦ Sunyani ◦ Accra </h4></nav>
+                            <br />
+                            <h4 id="about-desc">
+                                Jack! It's all fun when you reach the doorsteps of Lyte's...
+                                <br/>
+                                <br/>
+                                Lyte's restaurant is based on the simple idea of making nutritious and irresistible meals. Yet, affordable!!!
+                                <br />
+                                <br />
+                                Lyte's Restaurant is a new and exciting dining destination that has recently made its debut in the culinary scene. Established in 2023, the restaurant promises to offer a unique and innovative dining experience that is sure to delight foodies and gastronomes alike.
+                                <br/>
+                                <br />
+                                Located in the heart of a bustling urban center, Lyte's Restaurant features a modern and stylish decor that creates an inviting ambiance for guests. The space is designed to be warm and welcoming, with sleek furnishings and soft lighting that create a comfortable and intimate atmosphere.
+                                <br/>
+                                <br/>
+                                At Lyte's, the menu is carefully crafted to showcase the talents of the restaurant's world-class chefs. The dishes on offer are a fusion of global flavors and techniques, with a focus on using fresh, locally sourced ingredients whenever possible. The menu changes regularly, ensuring that guests always have something new and exciting to look forward to.
+                                <br/>
+                                <br/>
+                                The restaurant's signature dishes include a tantalizing array of small plates and shareable bites that are perfect for sampling and sharing with friends. Highlights include the seafood ceviche, which features fresh, citrus-marinated seafood served with crispy plantain chips, as well as the pork belly sliders, which are topped with a spicy-sweet Asian-inspired sauce and served on fluffy bao buns.
+                                <br/>
+                                <br/>
+                                Lyte's Restaurant also boasts an impressive beverage program, featuring an extensive wine list, craft beers, and creative cocktails that perfectly complement the menu. Whether guests are looking for a classic cocktail or something more adventurous, the skilled bartenders at Lyte's are sure to deliver.
+                                <br/>
+                                <br/>
+                                Overall, Lyte's Restaurant is a welcome addition to the dining scene, offering a unique and memorable experience that is sure to leave a lasting impression on guests. With its innovative menu, stylish decor, and exceptional service, Lyte's is poised to become one of the most talked-about restaurants in the city.
+                            </h4>
+                            <br/>
+                            <h2>Meet The CEO</h2>
+                            <div id="ceo">
+                                 <h4>
+                                    Oliver Boakye Deren is a multi-talented individual who serves as both the <br/> CEO of a restaurant and a skilled frontend developer. <br/><br/> With expertise in HTML, CSS, JS, React, and Python, he brings his technical <br/> proficiency to both his restaurant and programming endeavors. <br/> As CEO of the restaurant, Oliver oversees all aspects of the business, including menu <br/> development, staffing, and operations. <br/><br/> His business techniques include utilizing customer feedback to continuously improve the dining <br/> experience, building strong relationships with local vendors for sourcing fresh ingredients, and implementing <br/> efficient processes to ensure the restaurant runs smoothly. <br/><br/> In his programming work, he has developed a broad range of skills that allow him to create <br/> engaging and responsive user interfaces. <br/> Oliver's unique combination of business and technical acumen make him a valuable asset in both fields.    
+                                </h4> 
+                                <img id="ceo-image" src="lytepic.png" alt="" />  
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+        }
+
+        class Projects extends React.Component {
+            constructor(props){
+                super(props);
+                this.state = {
+                    likeoff: "likeoff"
+                }
+            }
+
+            like = () => {
+                this.setState({
+                    likeoff: "likeon"
+                })
+            };
+
+            render() {
+                return(
+                    <div id="mainpro">
+                        <h2 id="pro">Projects</h2>
+                        <div id="project">
+                            <div id="project1">
+                                <h3>Outreach...</h3>
+                                <h4>One project held by Lyte's restaurant was a community outreach program in which they partnered with a local food bank to provide meals to those in need. <br/> We pledged to donate a portion of their sales to the food bank and also offered customers the option to make a donation at the end of their meal. In addition, we organized a volunteer day where staff and customers could help prepare and distribute the meals at the food bank. This project not only helped to alleviate hunger in the community, but also fostered a sense of goodwill and community spirit among the restaurant staff and customers.</h4>
+                            </div>
+                            <div id="dlc">
+                            <h5>Saturday, 22nd April, 2023</h5>
+                            <img id={this.state.likeoff} onClick={this.like} src="like.svg" alt="Like" title="like" />
+                            <img src="comment.svg" alt="Comment" title="comment" />
+                            <img src="share.svg" alt="share" title="share" />
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div id="project">
+                            <div id="project1">
+                                <h3>Carbon Test...</h3>
+                                <h4>Another project held by Lyte's restaurant was a sustainability initiative to reduce their carbon footprint. <br/> We implemented several eco-friendly practices, such as using biodegradable packaging, sourcing ingredients locally, and composting food waste. We also educated their customers about their efforts and encouraged them to adopt sustainable habits, such as reducing food waste and bringing their own reusable containers. To measure the impact of their sustainability project, the restaurant tracked their energy consumption, waste generation, and greenhouse gas emissions over time. This project not only helped to minimize the restaurant's environmental impact but also inspired their customers to make more eco-conscious choices in their daily lives.</h4>
+                            </div>
+                            <div id="dlc">
+                            <h5>Saturday, 24th February, 2023</h5>
+                            <img id={this.state.likeoff} onClick={this.like} src="like.svg" alt="Like" title="like" />
+                            <img src="comment.svg" alt="Comment" title="comment" />
+                            <img src="share.svg" alt="share" title="share" />
+                            </div>
+                        </div>
+                        <div id="project">
+                            <div id="project1">
+                                <h3>Menu Redesign...</h3>
+                                <h4>Another project held by Lyte's restaurant was a menu redesign aimed at promoting healthier food options. <br/> We analyzed their existing menu and identified items that were high in calories, fat, and sodium. We then worked with a nutritionist to develop new menu items that were lower in these categories while still being delicious and satisfying. Lyte's restaurant also added more vegetarian and vegan options to their menu to cater to a wider range of dietary preferences.To promote their new healthier menu options, Lyte's restaurant launched a marketing campaign that highlighted the nutritional benefits of these dishes. They also offered a discount on these items to encourage customers to try them out. As a result, the restaurant saw an increase in sales of their healthier menu items and received positive feedback from customers who appreciated having more nutritious options to choose from.</h4>
+                            </div>
+                            <div id="dlc">
+                            <h5>Saturday, 17th February, 2023</h5>
+                            <img id={this.state.likeoff} onClick={this.like} src="like.svg" alt="Like" title="like" />
+                            <img src="comment.svg" alt="Comment" title="comment" />
+                            <img src="share.svg" alt="share" title="share" />
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+
+        }
+
+        class Menu extends React.Component {
+
+            render() {
+                return(
+                    <div></div>
+                )
+            }
+        }
+
+        class Chat extends React.Component {
+            constructor(props){
+                    super (props);
+                    this.state = {
+                        input1: "",
+                        input2: "",
+                        message: ""
+                    };
+                }
+
+            handleChange = (event) => {
+                if (event.target.id=="input1"){
+                this.setState({
+                    input1: event.target.value
+                });}else if(event.target.id=="input2") {
+                    this.setState({
+                        input2: event.target.value
+                    });} else if(event.target.id=="Textarea") {
+                        this.setState({
+                            message: event.target.value
+                        });
+                    }
+            };
+
+            render() {
+                return(
+                    <div id="chatsession">
+                        <h2 id="midhead">Send an e-mail</h2>
+                        <h4 id="bbs">Bulk order | Business | Suggestions</h4>
+                        <form action="">
+                            <h4 id="h4">Name</h4>
+                            <input id="input1" type="text" placeholder="Enter your name here" onChange={this.handleChange} />
+                            <br/>
+                            <h4 id="h4">Email Address</h4>
+                            <input id="input2" type="text" placeholder="Enter your email here" onChange={this.handleChange} />
+                            <br/>
+                            <h4 id="h4">Message</h4>
+                            <textarea name="enterText" id="Textarea" cols="30" rows="10" placeholder="Enter your message here" onChange={this.handleChange} ></textarea>
+                            <a id="submit" href={`mailto:lytecodes@gmail.com?subject=From%20your%20website%20by%20${this.state.input1}&body=${this.state.message}`}>Submit</a>
+                        </form > 
+                        <br/>
+                        
+                    </div>
+                );
+            }    
+        }
+
+        class Gallery extends React.Component {
+            render() {
+                return(
+                    <div></div>
+                )
+            }
+        }
             
 
         class App extends React.Component {
@@ -73,7 +245,7 @@
                          <MainComponent />
                     </div>
                 );
-
+            }
                 mainHome = (event) => {
                     if(event.target.value=="About") {
                     this.setState({
@@ -96,7 +268,6 @@
                         main: Gallery
                     });}
             };
-            }
         }
 
         const container = document.querySelector('#app');

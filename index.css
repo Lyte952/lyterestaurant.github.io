@@ -450,6 +450,7 @@ div span img:hover {
 
 #popdesc {
     font-size: 18px;
+    font-weight: 200;
 }
 
 #orderbtn {
@@ -468,7 +469,7 @@ div span img:hover {
     background-color: green;
     margin-top: 20px;
     color: rgb(255, 255, 255);
-    width: 80px;
+    width: 85px;
     text-align: center;
     margin-left: 50px;
     font-size: 20px;
@@ -577,7 +578,6 @@ div span img:hover {
 
       /*menu media queries*/
       #menu_list {
-        margin-left: 17%;
         margin-top: 30px;
       }
 
@@ -585,6 +585,11 @@ div span img:hover {
         margin-left: 35%;
         margin-top: 40px;
         margin-bottom: 10px;
+      }
+
+      .popup {
+        width: 85%;
+        height: 90%;
       }
 
       #gallery_text {

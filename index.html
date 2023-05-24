@@ -191,7 +191,7 @@
 
             openPopup = (event) => {
                 const imgsrc = event.target.getAttribute('imgsrc');
-                const popName = event.target.querySelector('h4').innerHTML;;
+                const popName = event.target.querySelector('h4').innerHTML;
                 const popdesc = event.target.getAttribute('popdesc');
                 const price = event.target.getAttribute('price');
 
@@ -233,64 +233,64 @@
                             <h3 id="currency" className="pops">{this.state.price}</h3></div>
                             <br/>
                             <h3 id="popdesc" className="pops">{this.state.popdesc}</h3>
-                            <button className="pops" id="orderbtn" onClick={this.sendOrder}>Order</button>
+                            <button className="pops" id="orderbtn" onClick={this.sendOrder} title={`Order ${this.state.popName} at ${this.state.price}`}>Order</button>
                             </div>
                         <div id="pizza_section">
                             <h2 id="menu_h2">◦ Pizza <img src="pizza.svg" alt="pizza" />◦</h2>
                             <div id="pizza_images">
-                                <button onClick={this.openPopup} value="cp" popdesc="Feel the taste of chicken in every bite of the chicken pizza" imgsrc="chickenpizza.png" price="GH₵50"><span><img src="chickenpizza.png" alt="chickenpizza" /><br/><h4>Chicken Pizza</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="Enjoy the classic flavor of pepperoni on your pizza" imgsrc="pepperonipizza.png" price="GH₵80"><span><img src="pepperonipizza.png" alt="pepperonipizza" /><br/><h4>Pepperoni Pizza</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="A delicious vegetarian pizza option with assorted veggies" imgsrc="veggiepizza.png" price="GH₵50"><span><img src="veggiepizza.png" alt="veggiepizza" /><br/><h4>Veggie Pizza</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="A classic and simple pizza with fresh tomatoes and basil" imgsrc="margheritapizza.png" price="GH₵50"><span><img src="margheritapizza.png" alt="margheritapizza" /><br/><h4>Margherita Pizza</h4></span></button>
+                                <button id="order" onClick={this.openPopup} value="cp" popdesc="Feel the taste of chicken in every bite of the chicken pizza" imgsrc="chickenpizza.png" price="GH₵50"><span><img src="chickenpizza.png" alt="chickenpizza" /><br/><h4>Chicken Pizza</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Enjoy the classic flavor of pepperoni on your pizza" imgsrc="pepperonipizza.png" price="GH₵80"><span><img src="pepperonipizza.png" alt="pepperonipizza" /><br/><h4>Pepperoni Pizza</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="A delicious vegetarian pizza option with assorted veggies" imgsrc="veggiepizza.png" price="GH₵50"><span><img src="veggiepizza.png" alt="veggiepizza" /><br/><h4>Veggie Pizza</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="A classic and simple pizza with fresh tomatoes and basil" imgsrc="margheritapizza.png" price="GH₵50"><span><img src="margheritapizza.png" alt="margheritapizza" /><br/><h4>Margherita Pizza</h4></span>Order</button>
                             </div>
                         </div>
                         
                         <div id="jollof_section">
                             <h2 id="menu_h2">◦ Jollof <img src="rice.svg" alt="rice" />◦</h2>
                             <div id="jollof_images">
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="chickenjollof.png" price="GH₵50"><span><img src="chickenjollof.png" alt="chickenjollof" /><br/><h4>Jollof + Chicken</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="beefjollof.png" price="GH₵80"><span><img src="beefjollof.png" alt="beefjollof" /><br/><h4>Beef Jollof</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="goatedjolof.png" price="GH₵50"><span><img src="goatedjollof.png" alt="goatedjollof" /><br/><h4>'Goated' Jollof</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="saladjollof.png" price="GH₵50"><span><img src="saladjollof.png" alt="saladjollof" /><br/><h4>Jollof + Salad</h4></span></button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Experience the perfect fusion of flavorful rice and tender chicken in our signature Jollof + Chicken dish. Savor the aromatic spices and succulent chicken that will transport your taste buds to culinary bliss." imgsrc="chickenjollof.png" price="GH₵50"><span><img src="chickenjollof.png" alt="chickenjollof" /><br/><h4>Jollof + Chicken</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Indulge in the rich and savory delight of our Beef Jollof. Immerse yourself in the mouthwatering combination of perfectly cooked rice and tender beef, seasoned to perfection with a blend of aromatic spices." imgsrc="beefjollof.png" price="GH₵80"><span><img src="beefjollof.png" alt="beefjollof" /><br/><h4>Beef Jollof</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Prepare yourself for a gastronomic adventure with our 'Goated' Jollof. Delight in the harmonious symphony of flavors as succulent goat meat mingles with aromatic rice, creating a taste that is nothing short of extraordinary." imgsrc="goatedjolof.png" price="GH₵50"><span><img src="goatedjollof.png" alt="goatedjollof" /><br/><h4>'Goated' Jollof</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Elevate your Jollof experience with our refreshing Jollof + Salad combination. Immerse yourself in the delightful medley of perfectly cooked rice and vibrant, crisp salad, creating a symphony of textures and flavors that will leave you wanting more." imgsrc="saladjollof.png" price="GH₵50"><span><img src="saladjollof.png" alt="saladjollof" /><br/><h4>Jollof + Salad</h4></span>Order</button>
                             </div>
                         </div>
 
                         <div id="chicken_section">
                             <h2 id="menu_h2">◦Chicken <img src="chicken.svg" alt="chicken" />◦</h2>
                             <div id="chicken_images">
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="fullchicken.png" price="GH₵50"><span><img src="fullchicken.png" alt="Full Chicken" /><br/><h4>Full Chicken</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="chickenwings.png" price="GH₵50"><span><img src="chickenwings.png" alt="chicken wings" /><br/><h4>Chicken wings</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="chickendrumsticks.png" price="GH₵50"><span><img src="chickendrumsticks.png" alt="chicken drumsticks" /><br/><h4>Chicken Drumsticks</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="specchicken.png" price="GH₵50"><span><img src="specchicken.png" alt="specchicken" /><br/><h4>Our Special Chicken</h4></span></button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Indulge in the rich and savory delight of our Full Chicken. Savor the tender and juicy meat seasoned to perfection with a secret blend of spices. A true feast for chicken lovers!" imgsrc="fullchicken.png" price="GH₵50"><span><img src="fullchicken.png" alt="Full Chicken" /><br/><h4>Full Chicken</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Tantalize your taste buds with our succulent Chicken Wings. Crispy on the outside, tender on the inside, and coated in your choice of mouthwatering sauces. Perfect for sharing or enjoying on your own!" imgsrc="chickenwings.png" price="GH₵50"><span><img src="chickenwings.png" alt="chicken wings" /><br/><h4>Chicken wings</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Experience the ultimate flavor explosion with our Chicken Drumsticks. Juicy and flavorful, marinated in a special blend of herbs and spices, and grilled to perfection. A true delight for drumstick enthusiasts!" imgsrc="chickendrumsticks.png" price="GH₵50"><span><img src="chickendrumsticks.png" alt="chicken drumsticks" /><br/><h4>Chicken Drumsticks</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Discover our signature dish, the Special Chicken. Prepared with utmost care, this culinary masterpiece features a harmonious blend of flavors and textures that will leave you craving for more. A true delicacy!" imgsrc="specchicken.png" price="GH₵50"><span><img src="specchicken.png" alt="specchicken" /><br/><h4>Our Special Chicken</h4></span>Order</button>
                             </div>
                         </div>
 
                         <div id="noodles_section">
                             <h2 id="menu_h2">◦Noodles <img src="noodles.svg" alt="noodles" />◦</h2>
                             <div id="noodles_images">
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="chickennoodle.png" price="GH₵50"><span><img src="chickennoodle.png" alt="chicken Noodles" /><br/><h4>'Chicken mixed' Noodles</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="chickennoods.png" price="GH₵50"><span><img src="chickennoods.png" alt="Noodles + Chicken" /><br/><h4>Noodles + Chicken</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="noodlesoup.png" price="GH₵50"><span><img src="noodlesoup.png" alt="Noodle soup" /><br/><h4>Noodles Soup</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="noodles.png" price="GH₵50"><span><img src="noodles.png" alt="Noodles only" /><br/><h4>Noodles Only</h4></span></button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Savor the delightful combination of tender chicken and flavorful noodles in our 'Chicken Mixed' Noodles. Each bite is a burst of umami goodness, making it a perfect choice for noodle lovers!" imgsrc="chickennoodle.png" price="GH₵50"><span><img src="chickennoodle.png" alt="chicken Noodles" /><br/><h4>'Chicken mixed' Noodles</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Experience the best of both worlds with our Noodles + Chicken dish. Enjoy the perfect balance of tender chicken pieces and slurp-worthy noodles, creating a harmonious fusion of flavors that will satisfy your cravings!" imgsrc="chickennoods.png" price="GH₵50"><span><img src="chickennoods.png" alt="Noodles + Chicken" /><br/><h4>Noodles + Chicken</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Warm up your soul with our comforting Noodles Soup. Delicate noodles swim in a flavorful broth, accompanied by fresh vegetables and aromatic spices. It's the perfect choice for a nourishing and satisfying meal!" imgsrc="noodlesoup.png" price="GH₵50"><span><img src="noodlesoup.png" alt="Noodle soup" /><br/><h4>Noodles Soup</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Enjoy the simplicity and versatility of our Noodles Only dish. Each strand of perfectly cooked noodles is a blank canvas for your taste buds. Customize it with your favorite sauces and toppings for a personalized culinary experience!" imgsrc="noodles.png" price="GH₵50"><span><img src="noodles.png" alt="Noodles only" /><br/><h4>Noodles Only</h4></span>Order</button>
                             </div>
                         </div>
 
                         <div id="fr_section">
                             <h2 id="menu_h2">◦Fried Rice<img src="rice.svg" alt="rice" />◦</h2>
                             <div id="fr_images">
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="chickenfr.png" price="GH₵50"><span><img src="chickenfr.png" alt="Chicken mixed Fried Rice" /><br/><h4>'Chicken mixed' Fried Rice</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="frchick.png" price="GH₵50"><span><img src="frchick.png" alt="Fried Rice & Chicken" /><br/><h4>Fried Rice + Chicken</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="goaatfr.png" price="GH₵50"><span><img src="goatfr.png" alt="Fried Rice & Goat" /><br/><h4>'Goated' Fried Rice</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="beeffr.png" price="GH₵50"><span><img src="beeffr.png" alt="Fried Rice & Beef" /><br/><h4>Beef Fried Rice</h4></span></button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Indulge in the delightful flavors of our 'Chicken Mixed' Fried Rice. This delectable dish features a perfect combination of fluffy rice, succulent chicken, and a medley of vegetables, all stir-fried to perfection. A must-try for fried rice enthusiasts!" imgsrc="chickenfr.png" price="GH₵50"><span><img src="chickenfr.png" alt="Chicken mixed Fried Rice" /><br/><h4>'Chicken mixed' Fried Rice</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Experience the harmonious pairing of Fried Rice + Chicken. Our flavorful fried rice is enhanced with tender chicken pieces, creating a satisfying and wholesome meal that will leave you wanting more. A perfect choice for a delicious and fulfilling dining experience!" imgsrc="frchick.png" price="GH₵50"><span><img src="frchick.png" alt="Fried Rice & Chicken" /><br/><h4>Fried Rice + Chicken</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Indulge in the unique and tantalizing flavors of our 'Goated' Fried Rice. This flavorful dish combines the richness of goat meat with fragrant rice, spices, and vegetables. It's a perfect choice for those seeking a delightful twist to their fried rice experience!" imgsrc="goaatfr.png" price="GH₵50"><span><img src="goatfr.png" alt="Fried Rice & Goat" /><br/><h4>'Goated' Fried Rice</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Indulge in the unique and tantalizing flavors of our 'Goated' Fried Rice. This flavorful dish combines the richness of goat meat with fragrant rice, spices, and vegetables. It's a perfect choice for those seeking a delightful twist to their fried rice experience!" imgsrc="beeffr.png" price="GH₵50"><span><img src="beeffr.png" alt="Fried Rice & Beef" /><br/><h4>Beef Fried Rice</h4></span>Order</button>
                             </div>
                         </div>
 
                         <div id="salad_section">
                             <h2 id="menu_h2">◦ Salad <img src="salad.svg" alt="salad" />◦</h2>
                             <div id="salad_images">
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="eggsalad.png" price="GH₵50"><span><img src="eggsalad.png" alt="Salad & Egg" /><br/><h4>Salad & Egg</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="salad.png" price="GH₵50"><span><img src="salad.png" alt="Salad only" /><br/><h4>Salad for your meal</h4></span></button>
-                                <button onClick={this.openPopup} value="cp" popdesc="" imgsrc="breadsalad.png" price="GH₵50"><span><img src="breadsalad.png" alt="Bread + Salad" /><br/><h4>'Salad + Bread' Sandwich</h4></span></button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Indulge in the perfect balance of freshness and protein with our Salad & Egg combination. Crisp and vibrant vegetables are paired with boiled eggs, creating a nutritious and satisfying meal option. A great choice for a healthy and filling dining experience!" imgsrc="eggsalad.png" price="GH₵50"><span><img src="eggsalad.png" alt="Salad + Egg" /><br/><h4>Salad & Egg</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Elevate your meal with our refreshing Salad. Bursting with a colorful array of fresh vegetables, this salad is a perfect accompaniment to any dish. Enjoy the crisp textures and vibrant flavors for a delightful dining experience!" imgsrc="salad.png" price="GH₵50"><span><img src="salad.png" alt="Salad only" /><br/><h4>Salad for your meal</h4></span>Order</button>
+                                <button onClick={this.openPopup} value="cp" popdesc="Experience a delightful combination of flavors and textures with our 'Salad + Bread' Sandwich. Enjoy the goodness of a hearty salad sandwiched between slices of freshly baked bread. It's a perfect choice for a light yet satisfying meal on the go!" imgsrc="breadsalad.png" price="GH₵50"><span><img src="breadsalad.png" alt="Bread + Salad" /><br/><h4>'Salad + Bread' Sandwich</h4></span>Order</button>
                             </div>
                         </div>
 
